@@ -1,6 +1,36 @@
 public class VerticalElevator extends SubsystemBase {
+    private ElevatorIO io;
+    
     public enum State {
-        MANUAL,
+        MANUAL
     };
     
+    public VerticalElevator(ElevatorIO io) {
+        this.io = io;
+    }
+
+    @Override
+    public void periodic() {
+        io.updateInputs(inputs);
+        Logger.processInputs("Elevator", inputs);
+    }
+
+    @Override
+    public void tuningInit() {
+        io.tuningInitIO();
+    }
+
+    @Override
+    public void tuningPeriodic() {
+        io.tuningPeriodicIO();
+    }
+
+    @Override
+    public void displayShuffleboard() {
+        io.displayShuffleboardIO();
+    }
+
+    public void manualControl(double speed) {
+        io.setSpeed(speed);
+    }
 }
