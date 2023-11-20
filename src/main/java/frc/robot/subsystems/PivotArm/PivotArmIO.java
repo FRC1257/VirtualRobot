@@ -1,3 +1,5 @@
+package frc.robot.subsystems.PivotArm;
+
 public interface PivotArmIO {
     public enum State {
         MANUAL;
