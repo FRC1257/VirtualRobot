@@ -1,21 +1,29 @@
 {
-    "files.exclude": {
-        "external": false,
-        "bazel-*": false,
-        "compile_commands.json": false,
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.server.launchMode": "Standard",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "bin/": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/*~": true
+  },
+  "java.test.config": [
+    {
+      "name": "WPIlibUnitTests",
+      "workingDirectory": "${workspaceFolder}/build/jni/release",
+      "vmargs": [ "-Djava.library.path=${workspaceFolder}/build/jni/release" ],
+      "env": {
+        "LD_LIBRARY_PATH": "${workspaceFolder}/build/jni/release" ,
+        "DYLD_LIBRARY_PATH": "${workspaceFolder}/build/jni/release"
+      }
     },
-    "java.import.gradle.enabled": false,
-    "java.import.maven.enabled": false,
-    "java.import.bazel.enabled": true,
-    "java.import.bazel.src.path": "/src",
-    "java.import.bazel.test.path": "/test",
-    "clangd.arguments": [
-        "--header-insertion=never",
-        "--compile-commands-dir=${workspaceFolder}/"
-    ],
-    "java.configuration.updateBuildConfiguration": "automatic"
+  ],
+  "java.test.defaultConfig": "WPIlibUnitTests"
 }
