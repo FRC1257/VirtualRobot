@@ -1,4 +1,4 @@
-package frc.robot.subsystems.pivotArm;
+package frc.robot.subsystems.PivotArm;
 
 import edu.wpi.first.math.VecBuilder;
 import edu.wpi.first.math.controller.ProfiledPIDController;

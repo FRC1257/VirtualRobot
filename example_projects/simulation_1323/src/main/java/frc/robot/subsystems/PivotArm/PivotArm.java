@@ -1,4 +1,4 @@
-package frc.robot.subsystems.pivotArm;
+package frc.robot.subsystems.PivotArm;
 
 import org.littletonrobotics.junction.Logger;
 import org.littletonrobotics.junction.networktables.LoggedDashboardNumber;
@@ -18,6 +18,8 @@ import frc.robot.RobotContainer;
 
 import static frc.robot.Constants.PivotArm.*;
 import static frc.robot.Constants.PivotArm.PIVOT_ARM_PID;
+import static frc.robot.Constants.PivotArm.PIVOT_ARM_MAX_ANGLE;
+import static frc.robot.Constants.PivotArm.PIVOT_ARM_MIN_ANGLE;
 
 public class PivotArm extends SubsystemBase {
     private final PivotArmIOInputsAutoLogged inputs = new PivotArmIOInputsAutoLogged();
