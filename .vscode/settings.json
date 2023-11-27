@@ -17,5 +17,9 @@
         "--header-insertion=never",
         "--compile-commands-dir=${workspaceFolder}/"
     ],
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.sourcePaths": [
+        "example_projects/simulation_1323",
+        "example_projects/template"
+    ]
 }
